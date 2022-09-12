@@ -1,0 +1,31 @@
+{
+  "pins" : [
+    {
+      "identity" : "bolts-objc",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mman/Bolts-ObjC.git",
+      "state" : {
+        "branch" : "spm",
+        "revision" : "280ce884d7c64aaf98f4f191b213dbaa0f854981"
+      }
+    },
+    {
+      "identity" : "parse-sdk-ios-osx",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mman/Parse-SDK-iOS-OSX.git",
+      "state" : {
+        "branch" : "spm",
+        "revision" : "b1f2a5cd1e5df228c34171495af0ccd3455492a2"
+      }
+    },
+    {
+      "identity" : "parse-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/cbaker6/Parse-Swift.git",
+      "state" : {
+        "revision" : "c926a7d6e89189a973a48076bee7de94891b2daa"
+      }
+    }
+  ],
+  "version" : 2
+}
