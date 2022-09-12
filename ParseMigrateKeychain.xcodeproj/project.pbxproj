@@ -11,11 +11,11 @@
 		704E77FA28CE43C40075F952 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704E77F928CE43C40075F952 /* ContentView.swift */; };
 		704E77FC28CE43C60075F952 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 704E77FB28CE43C60075F952 /* Assets.xcassets */; };
 		704E77FF28CE43C60075F952 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 704E77FE28CE43C60075F952 /* Preview Assets.xcassets */; };
-		704E780728CE47360075F952 /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 704E780628CE47360075F952 /* ParseSwift */; };
 		704E780A28CE477E0075F952 /* Parse in Frameworks */ = {isa = PBXBuildFile; productRef = 704E780928CE477E0075F952 /* Parse */; };
 		704E780C28CE47D40075F952 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704E780B28CE47D40075F952 /* ContentViewModel.swift */; };
 		704E780F28CE4CB10075F952 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704E780E28CE4CB10075F952 /* User.swift */; };
 		704E781128CE4CBE0075F952 /* Installation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704E781028CE4CBE0075F952 /* Installation.swift */; };
+		704E781428CEEF3E0075F952 /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 704E781328CEEF3E0075F952 /* ParseSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				704E781428CEEF3E0075F952 /* ParseSwift in Frameworks */,
 				704E780A28CE477E0075F952 /* Parse in Frameworks */,
-				704E780728CE47360075F952 /* ParseSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,8 +105,8 @@
 			);
 			name = ParseMigrateKeychain;
 			packageProductDependencies = (
-				704E780628CE47360075F952 /* ParseSwift */,
 				704E780928CE477E0075F952 /* Parse */,
+				704E781328CEEF3E0075F952 /* ParseSwift */,
 			);
 			productName = ParseMigrateKeychain;
 			productReference = 704E77F428CE43C40075F952 /* ParseMigrateKeychain.app */;
@@ -137,8 +137,8 @@
 			);
 			mainGroup = 704E77EB28CE43C40075F952;
 			packageReferences = (
-				704E780528CE47360075F952 /* XCRemoteSwiftPackageReference "Parse-Swift" */,
 				704E780828CE477E0075F952 /* XCRemoteSwiftPackageReference "Parse-SDK-iOS-OSX" */,
+				704E781228CEEF3E0075F952 /* XCRemoteSwiftPackageReference "Parse-Swift" */,
 			);
 			productRefGroup = 704E77F528CE43C40075F952 /* Products */;
 			projectDirPath = "";
@@ -371,14 +371,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		704E780528CE47360075F952 /* XCRemoteSwiftPackageReference "Parse-Swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/cbaker6/Parse-Swift.git";
-			requirement = {
-				kind = revision;
-				revision = c926a7d6e89189a973a48076bee7de94891b2daa;
-			};
-		};
 		704E780828CE477E0075F952 /* XCRemoteSwiftPackageReference "Parse-SDK-iOS-OSX" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mman/Parse-SDK-iOS-OSX.git";
@@ -387,18 +379,26 @@
 				kind = branch;
 			};
 		};
+		704E781228CEEF3E0075F952 /* XCRemoteSwiftPackageReference "Parse-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/parse-community/Parse-Swift";
+			requirement = {
+				kind = revision;
+				revision = 62553bc76cbf72fa731141f29a7a2a33ef3da24c;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		704E780628CE47360075F952 /* ParseSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 704E780528CE47360075F952 /* XCRemoteSwiftPackageReference "Parse-Swift" */;
-			productName = ParseSwift;
-		};
 		704E780928CE477E0075F952 /* Parse */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 704E780828CE477E0075F952 /* XCRemoteSwiftPackageReference "Parse-SDK-iOS-OSX" */;
 			productName = Parse;
+		};
+		704E781328CEEF3E0075F952 /* ParseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 704E781228CEEF3E0075F952 /* XCRemoteSwiftPackageReference "Parse-Swift" */;
+			productName = ParseSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
