@@ -12,7 +12,14 @@ import Parse
 class ContentViewModel: ObservableObject {
     @Published var objCUserObjectId = ""
     @Published var objCInstallationId = ""
-    @Published var objCSDKLoggedIn = false
+    @Published var objCSDKLoggedIn = false {
+        willSet {
+            guard newValue else {
+                return
+            }
+            errorMessage = ""
+        }
+    }
     @Published var swiftUserObjectId = ""
     @Published var swiftInstallationId = ""
     @Published var swiftSDKLoggedIn = false
